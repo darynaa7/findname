@@ -3,13 +3,15 @@
 
 int main()
 {
-    std::string root = "";
-    std::string name = "";
-    std::cout << " input the root: ";
-    std::cin >> root;
-    std::cout << " input the name: ";
-    std::cin >> name;
+#ifdef _WIN32
+    std::string root = "C:\\";
+#else
+    std::string root = "/";
+#endif 
+
+    
     FindFile find(root, name);
     find.Start();
+    std::cin.ignore();
     std::cin.get();
 }
