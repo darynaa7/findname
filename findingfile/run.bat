@@ -1,7 +1,7 @@
-cd \AppLib\findfile\findfile
+cd ..\findfile
 call runlib.bat
 
-cd \AppLib\findfile\findingfile
+cd ..\..\findingfile
 rmdir /s /q build_app
 mkdir build_app
 cd  build_app
