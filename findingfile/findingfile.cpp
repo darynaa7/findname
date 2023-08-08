@@ -3,6 +3,7 @@
 
 int main()
 {
+    
 #ifdef _WIN32
     std::string root = "C:\\";
 #else
@@ -12,8 +13,7 @@ int main()
     std::string name;
     std::cout << " input the name: ";
     std::cin >> name;
-    FindFile find(root, name);
-    find.Start();
+    Start(name, root);
     std::cin.ignore();
     std::cin.get();
 }
